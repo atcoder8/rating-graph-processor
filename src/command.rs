@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use clap::Parser;
 
 /// Adds a white background to convert the image to opaque.
-/// It also generates an image scaled to fit the size of the X(formerly Twitter) header image.
+/// It also generates an image scaled to fit the size of the X (formerly Twitter) header image.
 #[derive(Debug, Parser)]
 #[command(version, about)]
 pub(crate) struct Cli {
