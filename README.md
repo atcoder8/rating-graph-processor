@@ -22,17 +22,19 @@ Specify the original image and the output directory as arguments.
 The help message when you run `rating-graph-processor -h` is as follows.
 
 ```
-Adds a white background to convert the image to opaque. It also generates an image scaled to fit the size of the X(formerly Twitter) header image
+Converts the specified image to an image that fits the X (formerly Twitter) header
 
-Usage: rating-graph-processor <ORIGINAL_IMAGE> <OUTPUT_DIR>
+Usage: rating-graph-processor [OPTIONS] <ORIGINAL_IMAGE> <OUTPUT_DIR>
 
 Arguments:
   <ORIGINAL_IMAGE>  Original image
   <OUTPUT_DIR>      Output directory for processed images
 
 Options:
-  -h, --help     Print help
-  -V, --version  Print version
+  -c, --config <CONFIG>  Configuration file
+      --header-only      If this flag is specified, only images processed for headers will be generated. An image that has only been opaque will not be generated
+  -h, --help             Print help
+  -V, --version          Print version
 ```
 
 # Configuration
