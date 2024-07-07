@@ -29,7 +29,7 @@ where
     let scaled_w = ((image.width() as f64 * scaling_ratio) as u32).min(box_shape.0);
     let scaled_h = ((image.height() as f64 * scaling_ratio) as u32).min(box_shape.1);
 
-    imageops::resize(image, scaled_w, scaled_h, imageops::FilterType::Gaussian)
+    imageops::resize(image, scaled_w, scaled_h, imageops::FilterType::CatmullRom)
 }
 
 /// Adds a white background and resizes the image that fits into the header size.
