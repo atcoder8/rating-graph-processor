@@ -7,7 +7,7 @@ license = "CC0-1.0"
 name = "rating-graph-processor"
 readme = "README.md"
 repository = "https://github.com/atcoder8/rating-graph-processor"
-version = "0.2.0"
+version = "0.2.1"
 
 [dependencies]
 anyhow = "1.0.86"
