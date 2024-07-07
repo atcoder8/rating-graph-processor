@@ -9,10 +9,10 @@ The settings can be changed by specifying the configuration file described bello
 
 # Installation
 
-Install from GitHub with the following command.
+Run the following command to install.
 
 ```sh
-cargo install --git https://github.com/atcoder8/rating-graph-processor
+cargo install rating-graph-processor
 ```
 
 # Usage
