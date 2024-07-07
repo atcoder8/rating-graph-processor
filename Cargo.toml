@@ -1,11 +1,17 @@
 [package]
-name = "rating-graph-processor"
-version = "0.2.0"
+authors = ["pencoder"]
+description = "Converts the specified image to an image that fits the X (formerly Twitter) header."
 edition = "2021"
+keywords = ["cli", "image"]
+license = "CC0-1.0"
+name = "rating-graph-processor"
+readme = "README.md"
+repository = "https://github.com/atcoder8/rating-graph-processor"
+version = "0.2.0"
 
 [dependencies]
 anyhow = "1.0.86"
-clap = { version = "4.5.8", features = ["derive"] }
+clap = {version = "4.5.8", features = ["derive"]}
 image = "0.25.1"
-serde = { version = "1.0.204", features = ["derive"] }
+serde = {version = "1.0.204", features = ["derive"]}
 toml = "0.8.14"
