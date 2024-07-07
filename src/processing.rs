@@ -18,6 +18,7 @@ pub(crate) fn create_opaque_image(img: &RgbaImage) -> RgbaImage {
 fn create_boxed_image<I>(
     image: &I,
     box_shape: (u32, u32),
+    filter: imageops::FilterType,
 ) -> ImageBuffer<I::Pixel, Vec<<I::Pixel as Pixel>::Subpixel>>
 where
     I: GenericImageView,
@@ -29,12 +30,12 @@ where
     let scaled_w = ((image.width() as f64 * scaling_ratio) as u32).min(box_shape.0);
     let scaled_h = ((image.height() as f64 * scaling_ratio) as u32).min(box_shape.1);
 
-    imageops::resize(image, scaled_w, scaled_h, imageops::FilterType::CatmullRom)
+    imageops::resize(image, scaled_w, scaled_h, filter)
 }
 
 /// Adds a white background and resizes the image that fits into the header size.
-pub(crate) fn create_header_image(img: &RgbaImage) -> RgbaImage {
-    let scaled_image = create_boxed_image(img, HEADER_SIZE);
+pub(crate) fn create_header_image(img: &RgbaImage, filter: imageops::FilterType) -> RgbaImage {
+    let scaled_image = create_boxed_image(img, HEADER_SIZE, filter);
 
     let top_margin = (HEADER_SIZE.0 - scaled_image.width()) / 2;
     let left_margin = (HEADER_SIZE.1 - scaled_image.height()) / 2;

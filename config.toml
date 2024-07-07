@@ -1,0 +1,14 @@
+[settings]
+
+# Filename of the image with opaque processing only.
+# Default: opaque.png
+opaque_image = "opaque.png"
+
+# Filename of the processed for the X (formerly Twitter) header.
+# Default: header.png
+header_image = "header.png"
+
+# Type of sampling filter to use when resizing the image.
+# Available filters: [Nearest, Triangle, CatmullRom, Gaussian, Lanczos3]
+# Default: CatmullRom
+filter = "CatmullRom"
